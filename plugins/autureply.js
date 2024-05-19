@@ -8,13 +8,13 @@ let handler = async (m, { conn }) => {
     // تجاهل الرسائل الفارغة أو التي تحتوي على روابط
     if (!m.text || m.isBaileys || m.text.includes("http://") || m.text.includes("https://")) return;
 
-    let name = "JITOSSA AI";
+    let name = "ESSAOUIDI AI";
 
     // التأكد من أن المستخدم لم يتم الترحيب به من قبل
     if (!welcomed[m.sender]) {
         welcomed[m.sender] = true; // تعيين true للمستخدم الذي تم الترحيب به
 
-        await conn.sendMessage(m.chat, { text: `مرحبًا بك في JITOSSA AI، أنا هنا لمساعدتك. يرجى كتابة رسالتك للبدء في المحادثة.`, quoted: m });
+        await conn.sendMessage(m.chat, { text: `مرحبًا بك في ESSAOUIDI AI، أنا هنا لمساعدتك. يرجى كتابة رسالتك للبدء في المحادثة.`, quoted: m });
     }
 }
 
